@@ -38,7 +38,7 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         
         try {
-            ardu.arduinoRXTX("COM14", 9600, listener);
+            ardu.arduinoRXTX("/dev/ttyACM0", 9600, listener);
         } catch (ArduinoException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
